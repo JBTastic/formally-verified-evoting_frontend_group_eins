@@ -1,10 +1,16 @@
 # FVE-Voting Website
 
+## Links
+[Our Backend Repo](https://github.com/Fabmeister/formally-verified-evoting_backend_group_eins)  
+[Our Protobuf Repo](https://github.com/Fabmeister/formally-verified-evoting_protobufs_group_eins/)
+
+---
+
+[Official gRPC Web](https://grpc.io/docs/platforms/web/basics/)
+
 ## Explanations
 
 ### ProtoBufs
-
-[gRPC Web](https://grpc.io/docs/platforms/web/basics/)
 
 Commands to generate the JavaScript files from Protobufs:
 
@@ -139,3 +145,13 @@ Was created when npm was initialized. The `npm run` commands can be customized i
 #### README.md
 
 This file you are currently reading.
+
+## About and credits
+This is a student project made as part of the computer science major at the University Regensburg.
+During the duration of the project gitlab was used but now ported to github in way that email addresses wouldn't be leaked. Unfortunatly the git history was lost during this process.
+The project group (called Gruppe EinS) consisted of (with the respected area of responsibility):
+   1. <https://github.com/Vok321> Backend dev and Dafny
+   2. <https://github.com/Fabmeister> Backend dev, architecture and technical planning
+   3. <https://github.com/4lekse1> DevOps (in the original gitlab) and most of the unit tests
+   4. <https://github.com/JBTastic> **Frontend/Web dev**
+   5. <https://github.com/Tobox-xD> **Frontend/Web dev**
