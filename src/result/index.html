@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="icon" href="../assets/favicon.png" type="image/png" />
+    <script src="../jquery-3.7.1.min.js"></script>
+
+    <!-- Import der Bibliothek für das Anzeigen des Balkendiagramms -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+<body>
+    <h1 id="head1">Ergebnisse werden geladen...</h1>
+
+    <div class="result-content">
+        <canvas id="myChart"></canvas>
+
+        <table id="result-table">
+            <!-- Überschrift der Spalten -->
+            <tr>
+                <th>Platz</th>
+                <th>Kandidat</th>
+                <th>Stimmen</th>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
+
+<script src="../dist/result.js"></script>

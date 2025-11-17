@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../output.css" rel="stylesheet" />
+  <link href="./style.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <script src="../jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <a href="../" class="back inline-flex items-center gap-1">
+    <span class="material-symbols-outlined">arrow_back</span>
+    Abmelden & Zurück zur Homepage
+  </a>
+  <!-- Überschrift -->
+  <h1>
+    Wahlleiter
+  </h1>
+  <div class=" grid justify-center w-full h-full">
+    <!-- Wahl erstellen Button -->
+    <a href="./wahl-erstellen/" class="flex items-center justify-center font-medium p-10 rounded-2xl w-full h-32">
+      Wahl erstellen
+    </a>
+    <!-- Wahl löschen Button -->
+    <a href="./wahl-loeschen/"
+      class="flex items-center justify-center mt-10 font-medium p-10 rounded-2xl w-full h-32 disabled">
+      Wahl löschen
+    </a>
+    <!-- result anzeigen Button -->
+    <a href="../result/"
+      class="flex items-center justify-center mt-10 font-medium p-10 rounded-2xl w-full h-32 disabled">
+      Result
+    </a>
+  </div>
+</body>
+
+</html>
+<script src="../dist/wahlleiterHomepage.js"></script>

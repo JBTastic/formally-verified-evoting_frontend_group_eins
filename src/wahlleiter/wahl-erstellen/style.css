@@ -1,0 +1,241 @@
+h2 {
+  font-family: var(--font-sans-serif);
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+select {
+  background-color: var(--background);
+  color: var(--text-color);
+  border: 1px solid var(--accent);
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 15.5rem;
+}
+
+option {
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+main {
+  margin-bottom: 5rem;
+}
+
+div {
+  margin-bottom: 1.5rem;
+  margin-top: 0.3rem;
+  padding: 0.3rem;
+  width: fit-content;
+}
+
+.date-picker {
+  font-family: var(--font-sans-serif);
+  font-size: 1.2rem;
+  width: fit-content;
+  margin: 1rem;
+}
+
+div {
+  margin-bottom: 1.5rem;
+  margin-top: 0.3rem;
+  padding: 0.3rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  width: fit-content;
+}
+
+.popup-box {
+  display: none;
+  background-color: var(--text-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+
+.popup-content {
+  color: var(--text-color-secondary);
+  font: var(--font-sans-serif);
+  font-weight: bold;
+  text-align: center;
+}
+
+.popup-buttons {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.popup-accept {
+  background-color: var(--text-color);
+  color: var(--text-color-secondary);
+  border-radius: 1rem;
+  border: 0.1rem solid var(--element-background);
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-deny {
+  background-color: var(--warning);
+  border-radius: 1rem;
+  border: 0.1rem solid rgb(94, 0, 0);
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-accept:hover {
+  background-color: var(--element-hover);
+  cursor: pointer;
+}
+
+.popup-deny:hover {
+  background-color: rgb(255, 166, 166);
+  color: var(--text-color-secondary);
+  cursor: pointer;
+}
+
+select:invalid {
+  /* Wenn kein Wahlsystem ausgewählt ist, Textfarbe verdunkeln */
+  color: var(--text-color-muted);
+}
+
+#disable-input {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  display: none;
+}
+
+.date-picker:invalid {
+  /* Wenn kein Datum ausgewählt ist, Textfarbe verdunkeln */
+  color: var(--text-color-muted);
+}
+
+/* Styling des "Zurück zu Hauptseite" Links */
+a.back {
+  all: unset;
+  color: #457ee8;
+  font-weight: bold;
+  font-size: 1rem;
+  display: block;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+a.back:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Styling für den zurück Pfeil im Zurück Link */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  vertical-align: middle;
+  margin-right: 4px;
+  line-height: 1;
+}
+
+/* Checkbox Input Felder angepasst aus input in der inputcss */
+.checkbox-field {
+  display: flex-box;
+  align-items: center;
+  justify-content: left;
+
+  border: 1px solid var(--accent); /* entspricht border-gray-300 */
+  border-radius: 0.375rem; /* entspricht rounded → 6px */
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+  width: fit-content;
+  outline: none; /* focus:outline-none */
+  background-color: var(--background);
+}
+
+.checkbox-field::placeholder {
+  color: var(--text-color-muted); /* placeholder-gray-400 */
+}
+
+.checkbox-field:focus {
+  box-shadow: 0 0 0 2px var(--accent); /* focus:ring-2 + color */
+}
+
+/* ändertr größe und Fareb der Checkbox */
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--accent);
+  margin-left: 0.5rem;
+}
+
+/* QR Code */
+
+.voter-token-display {
+  max-width: 500px;
+  display: none;
+  color: var(--text-color-secondary);
+  background-color: var(--text-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+}
+
+/* richtet die eingabe boxen untereinander aus */
+.general-input {
+  display: flex;
+}
+
+form,
+.input-div {
+  display: grid;
+  justify-items: center;
+  max-width: 30vw;
+}
+
+p {
+  max-width: 100%;
+  padding: 1rem;
+  overflow-wrap: anywhere;
+  line-break: anywhere;
+  text-align: center;
+}
+
+.table-div {
+  max-height: 15rem;
+  overflow-y: auto;
+}
+
+tr {
+  border-top: 1px solid var(--background);
+  border-bottom: 1px solid var(--background);
+}
+
+tr:first-of-type {
+  border-top: none; /* remove top border for first row */
+}
+
+tr:last-of-type {
+  border-bottom: none; /* remove bottom border for last row */
+}
+
+td {
+  padding: 0.5rem 1rem;
+}

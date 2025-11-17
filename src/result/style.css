@@ -1,0 +1,36 @@
+canvas {
+  display: block;
+  margin: 0 auto; /* horizontal zentrieren */
+  width: 50%;
+  height: 10rem;
+  margin-bottom: 1rem;
+  background: var(--text-secondary);
+}
+
+table {
+  margin: 0 auto;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  border: 0.1rem solid var(--text);
+  background-color: var(--element-hover);
+}
+
+th {
+  background-color: var(--element-background);
+}
+
+.result-content {
+  padding: 2rem;
+}
+
+h2 {
+  margin: 0 auto;
+  width: 30rem;
+  text-align: center;
+  font-size: 2rem;
+}

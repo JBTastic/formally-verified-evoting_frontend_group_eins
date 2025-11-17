@@ -1,0 +1,42 @@
+h1 {
+    text-align: center;
+    font-family: var(--font-sans-serif);
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    padding: 2.5rem;
+}
+
+/* Styling des "Zurück zu Hauptseite" Links */
+a.back {
+    all: unset;
+    color: #457ee8;
+    font-weight: bold;
+    font-size: 1rem;
+    display: block;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+a.back:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Styling für den zurück Pfeil im Zurück Link */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    vertical-align: middle;
+    margin-right: 4px;
+    line-height: 1;
+}
+
+.disabled {
+  pointer-events: none;  /* verhindert Klicks */
+  opacity: 0.5;          /* macht den Button ausgegraut */
+  cursor: not-allowed;   /* zeigt einen gesperrten Mauszeiger */
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../output.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back" />
+    <link rel="icon" href="../../assets/favicon.png" type="image/png" />
+    <script src="../../jquery-3.7.1.min.js"></script>
+</head>
+
+
+<body>
+
+    <a href="../" class="back inline-flex items-center gap-1">
+        <span class="material-symbols-outlined">arrow_back</span>
+        Zurück
+    </a>
+
+    <!--Überschriften-->
+    <h1>
+        Wahl löschen
+    </h1>
+
+    <!-- div das nötig ist um das graue overly drauf zu legen -->
+    <div id="disable-input"></div>
+    <!--Seiteninhalt-->
+    <main>
+
+        <div class="election">
+            <!-- hier kommen die wahlen dynamisch rein -->
+        </div>
+
+        <!-- Hinzufügen -->
+        <button id="add-election">
+            Dummy Wahlen hinzufügen
+        </button>
+
+    </main>
+
+    <!-- Popupbox -->
+    <div class="popup-box popup-div" id="popup">
+        <div class="popup-content">
+            <!-- Text, der oben angezeigt wird -->
+            <p id="deletion-message">
+                <!-- wird gesetzt durch javascript -->
+            </p>
+            <p>
+                Wiederherstellung ist nicht mehr möglich!
+            </p>
+        </div>
+
+        <!-- Knöpfe für Bestätigung/Ablehnung -->
+        <div class="popup-buttons popup-div">
+
+            <!-- Ablehnungsknopf -->
+            <div class="popup-deny popup-div" id="popupDeny">
+                Abbrechen
+            </div>
+
+            <!-- Bestätigungsknopf -->
+            <div class="popup-accept popup-div" id="popupAccept">
+                Wahl löschen
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="./script.js"></script>

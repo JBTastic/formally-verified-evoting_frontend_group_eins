@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="icon" href="../assets/favicon.png" type="image/png" />
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+
+
+<body>
+    <!-- Scroll background for header -->
+    <div class="scrollbox">
+
+        <!--Überschriften-->
+        <div class="headers">
+            <h1 id="election-name">
+                Fehler beim Laden des Wahlnamens
+            </h1>
+        </div>
+    </div>
+
+
+    <!--Seiteninhalt-->
+    <main>
+        <h2 id="election-type">
+            <!-- Verfahren hier einfügen -->
+            Fehler beim Laden des Wahlverfahrens
+        </h2>
+        <!--Beschreibungstext Wahlsystem-->
+        <p id="election-type-description" class="description-text">
+            <!-- Beschreibung des Verfahrens hier einfügen -->
+            Fehler beim Laden des Wahlverfahrens
+        </p>
+
+        <!-- div das nötig ist um das graue overlay drauf zu legen -->
+        <div id="disable-input"></div>
+
+        <!--Beschreibung des genutzen Wahlsystems-->
+        <div class="description">
+            <!--Beschreibung der Wahl-->
+
+            <!--Überschrift-->
+            <h2>
+                Über die Wahl
+            </h2>
+
+            <!--Wahlbeschreibung-->
+            <p class="description-text" id="description-box">
+                Fehler beim Laden der Wahlbeschreibung
+            </p>
+        </div>
+
+        <!--Container für Kandidatenliste uns Submit Knopf-->
+        <div class="wahl">
+
+            <!--Formular für die Stimme-->
+            <form class="form">
+
+                <!--Container für die Inputfelder-->
+                <span class="all-inputs">
+
+                    <!-- Hier werden die Inputs eingefügt -->
+                </span>
+
+            </form>
+
+            <!--Submitbutton -->
+            <button id="submitButton" class="mt-10">
+                Wahl abschicken
+            </button>
+        </div>
+    </main>
+
+
+    <!-- Popupbox -->
+    <div class="popup-box popup-div" id="popup">
+        <div class="popup-content">
+            <!-- Text, der oben angezeigt wird -->
+            <p>
+                Möchten Sie die Stimme abgeben
+            </p>
+            <p id="vote-recap">
+                Fehler beim Anzeigen der Stimme
+            </p>
+        </div>
+
+        <!-- Knöpfe für Bestätigung/Ablehnung -->
+        <div class="popup-buttons popup-div">
+
+            <!-- Ablehnungsknopf -->
+            <div class="popup-deny popup-div" id="popupDeny">
+                Ablehnen
+            </div>
+
+            <!-- Bestätigungsknopf -->
+            <div class="popup-accept popup-div" id="popupAccept">
+                Annehmen
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="../dist/voting.js"></script>
+
+</html>

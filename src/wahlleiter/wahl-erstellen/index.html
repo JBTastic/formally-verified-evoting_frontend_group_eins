@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../output.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back" />
+    <link rel="icon" href="../../assets/favicon.png" type="image/png" />
+    <script src="../../jquery-3.7.1.min.js"></script>
+    <!-- QR-Code Generator -->
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+</head>
+
+<!-- Inhalt der seite -->
+
+<body>
+    <!-- Zurückknopf -->
+    <a href="../" class="back inline-flex items-center gap-1">
+        <span class="material-symbols-outlined">arrow_back</span>
+        Zurück
+    </a>
+    <!-- Überschrift -->
+    <h1> Erstelle deine Wahl </h1>
+
+    <!-- Box wo das Formular angeziegt wird -->
+    <main class="flex flex-col items-center gap-10">
+
+        <!-- div das nötig ist um das graue overly drauf zu legen -->
+        <div id="disable-input"></div>
+
+        <!-- Formular für die Wahlerstellung -->
+        <!-- alle eingabefelder required, damit eine leere abgabe einen fehler wirft -->
+        <form class="form" action="">
+            <div>
+                <h2>Allgemein</h2>
+                <!-- Eingabe des Namens -->
+                <div>
+                    <label> Wahlname </label>
+                    <input class="general-input" id="election-name" type="text" placeholder="Name der Wahl"
+                        name="Election-Name" required>
+                    </input>
+                </div>
+
+                <!-- Eingabe des Wahlpassworts -->
+                <div>
+                    <label> Wahlpasswort </label>
+                    <input class="general-input" id="election-name" type="password" placeholder="Paswort der Wahl"
+                        name="Election-Password" required>
+                    </input>
+                </div>
+
+                <!-- Eingabe der Wahlbeschreibung -->
+                <div>
+                    <label> Wahlbeschreibung </label>
+                    <input class="general-input" id="election-description" type="text"
+                        placeholder="Beschreibung der Wahl" name="Election-Description" required> </input>
+                </div>
+
+                <!-- Eingabe des Wahlsystems als dropdown -->
+                <div>
+                    <label> Wahlsystem </label>
+                    <select class="general-input" id="election-system" name="Election-System" required>
+                        <!-- Platzhaltertext nicht auswählbar -->
+                        <option value="" selected disabled> Bitte Auswählen </option>
+                        <!-- Option für das einzige Wahlsystem bisher -->
+                        <option value="Approval Voting"> Approval Voting </option>
+                        <option value="Combined Approval"> Combined Approval </option>
+                        <option value="Scored Approval"> Scored Approval </option>
+                        <option value="Instant-Runoff Voting"> Instant-Runoff Voting </option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Eingabe der Kandidaten -->
+            <div>
+                <h2>Kandidaten</h2>
+                <!-- span gebraucht für das einfügen neuer kandidaten in javascript -->
+                <span class="all-candidates">
+                    <!-- html text, der eingefügt wird sihe script.js -->
+                    <span class="inputf">
+                        <input id="candidate0" type="text" placeholder="Name des Kandidaten" name="Candidate1"
+                            required />
+                        <div></div>
+                    </span>
+
+                </span>
+                <!-- Kandidaten hinzufügen Knopf, löst javascript aus, der ein neues Eingabefeld einfügt -->
+                <div class="add-candidate button-like" id="add-candidate-button"> Kandidaten hinzufügen
+                </div>
+            </div>
+
+            <!-- Hinzufügen der Wähler bzw der Emailadressen der Wähler-->
+            <div class="input-div">
+                <h2>Wähler</h2>
+
+                <!-- Checkbox ob Wahl offen oder geschlossen sein soll -->
+                <p>Wenn "Offene Wahl" ausgewählt ist müssen keine E-Mailadressen mehr angegeben werden! </p>
+                <div class="checkbox-field justify-center content-center">
+                    <label>Offene Wahl </label>
+                    <input type="checkbox" name="open-election" />
+                </div>
+
+                <!-- span gebraucht für das einfügen neuer Wähler in javascript -->
+                <span class="all-voters">
+
+                    <!-- html, das von dem javascript code eingefügt wird -->
+                    <span class="inputf">
+                        <input type="email" placeholder="Email Adresse des Wählers" name="Email1" required />
+                        <div></div>
+                    </span>
+
+                </span>
+
+                <!-- Wähler hinzufügen Knopf, löst javascript aus, der ein neues Eingabefeld einfügt -->
+                <div class="add-voter button-like" id="add-voter-button"> Wähler hinzufügen
+                </div>
+            </div>
+
+            <!-- Eingabe für die Deadline -->
+            <div class="input-div">
+                <h2>Deadline Hinzufügen</h2>
+
+                <!-- Eingabefeld, mit knopf für Kalenderpopup -->
+                <input class="date-picker" type="date" min="2025-06-18" name="Deadline" required />
+                <!-- Uhrzeit -->
+                <input class="date-picker" type="time" name="Timestamp" required />
+            </div>
+        </form>
+        <div style="display: flex; align-items: center; margin: auto">
+            <button class="form-button button-like" id="submitButton">Wahl erstellen</button>
+        </div>
+
+    </main>
+
+    <!-- Popupbox -->
+    <div class="popup-box" id="popup">
+        <div class="popup-content">
+            <!-- Text, der oben angezeigt wird -->
+            <p>
+                Möchtest du die Wahl erstellen?
+            </p>
+            <p>
+                Änderungen sind nicht mehr möglich!
+            </p>
+        </div>
+
+        <!-- Knöpfe für Bestätigung/Ablehnung -->
+        <div class="popup-buttons">
+
+            <!-- Ablehnungsknopf -->
+            <div class="popup-deny" id="popupDeny">
+                Abbrechen
+            </div>
+
+            <!-- Bestätigungsknopf -->
+            <div class="popup-accept" id="popupAccept">
+                Wahl erstellen
+            </div>
+        </div>
+    </div>
+
+    <!-- Box für QR-Code -->
+    <div class="voter-token-display">
+        <label>Wähler Token</label>
+        <div id="qrcode"></div>
+        <div class=table-div id="table"></div>
+        <p id="textlink">Fehler beim erstellen des Links</p>
+        <button id="qr-button">Zurück zur Wahlleiterseite</button>
+    </div>
+
+    <script src="../../dist/wahlErstellen.js"></script>
+</body>
+
+</html>

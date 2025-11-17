@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap");
+
+/* Lege Farben und Schriftarten für das gesamte Projekt fest. */
+:root {
+  --background: hsl(0, 0%, 8%);
+  --background-secondary: hsl(0, 0%, 90%);
+  --text-color: hsl(0, 0%, 95%);
+  --text-color-muted: hsl(0, 0%, 70%);
+  --text-color-secondary: hsl(0, 0%, 5%);
+  --text-color-secondary-muted: hsl(0, 0%, 30%);
+  --accent: hsl(40, 60%, 60%);
+  --element-background: hsl(220, 48%, 40%);
+  --element-hover: hsl(220, 48%, 60%);
+  --warning: hsl(0, 100%, 40%);
+  --warning-hover: hsl(0, 100%, 50%);
+
+  --font-sans-serif: "Helvetica", sans-serif;
+
+  --xxs: 0.25rem;
+  --xs: 0.5rem;
+  --s: 0.75rem;
+  --m: 1rem;
+  --l: 1.25rem;
+  --xl: 1.75rem;
+  --xxl: 2.5rem;
+}
+
+/* Damit die Website bei verschiedenen Bildschirmgrößen richtig skaliert */
+html {
+  font-size: 120%; /* 1rem = 19.2px */
+  /* font-size: calc(1vh + 1vw);  vll so dann resized es sich */
+}
+
+/* Standart für Überschriften */
+h1 {
+  text-align: center;
+  font-family: var(--font-sans-serif);
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  padding: 2.5rem;
+}
+
+/* Standart Hintergrund und Textfarbe */
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+/* Standart Styling für Buttons und Links damit die die Animation haben und so weiter */
+button,
+a,
+.button-like {
+  background-color: var(--element-background);
+  color: var(--text-color);
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  font-family: var(--font-sans-serif);
+  font-size: 1.2rem;
+  border-radius: 0.8rem;
+  padding: 0.5rem 0.6rem 0.3rem;
+
+  /* Text Center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Hover Effekte für Buttons und Links */
+button:hover,
+a:hover,
+.button-like:hover {
+  transform: translateY(-5px);
+  background-color: var(--element-hover);
+  box-shadow: 0 6px 12px rgba(49, 34, 34, 0.3), 0 0 0 2px var(--accent);
+  cursor: pointer;
+}
+
+/* Text Input Felder für Forms */
+input {
+  border: 1px solid var(--accent); /* entspricht border-gray-300 */
+  border-radius: 0.375rem; /* entspricht rounded → 6px */
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+  width: 16rem; /* w-64 = 256px */
+  outline: none; /* focus:outline-none */
+  background-color: var(--background);
+}
+
+input::placeholder {
+  color: var(--text-color-muted); /* placeholder-gray-400 */
+}
+
+input:focus {
+  box-shadow: 0 0 0 2px var(--accent); /* focus:ring-2 + color */
+}
+
+/* Fehlermeldungen in der Richtigen Farbe */
+.error {
+  color: var(--warning);
+}

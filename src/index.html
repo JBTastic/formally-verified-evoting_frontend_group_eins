@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="icon" href="./assets/favicon.png" type="image/png" />
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h1>
+        Formally Verified E-Voting
+    </h1>
+
+    <main class="flex flex-col items-center gap-10">
+        <!-- Erklärungstext für Wähler -->
+        <p class="text-lg text-center max-w-xl">
+            Wenn Sie wählen, oder das Ergebnis einer Wahl einsehen wollen, geben Sie bitte hier ihren Voter Token ein.
+        </p>
+
+        <form id="voting-form" class="flex flex-col items-center gap-4 w-full max-w-sm mb-6">
+            <h2 class="text-xl font-semibold">Ihr Voter Token</h2>
+            <input id="voter-token" autocomplete="off" type="text" placeholder="Voter Token eingeben"
+                class="w-full border rounded px-4 py-2" />
+            <button type="submit" name="action" value="vote">Zur Wahlseite</button>
+            <button type="submit" name="action" value="result">Zum Ergebnis</button>
+            <p id="voter-token-error" class="error shake text-sm text-[var(--warning)] hidden">Voter Token ist leer</p>
+        </form>
+
+
+        <!-- Abstand -->
+        <div class="h-3"></div>
+
+        <p class="text-lg text-center max-w-xl">
+            Wenn Sie eine Wahl erstellen oder verwalten möchten, loggen Sie sich bitte als Wahlleiter ein.
+        </p>
+        <!-- Login-Formular -->
+        <form id="login-form" class="flex flex-col items-center gap-4 w-full max-w-sm">
+            <h2 class="text-xl font-semibold">Login</h2>
+            <input id="username" type="text" placeholder="Benutzername" />
+            <input id="password" type="password" placeholder="Passwort" />
+            <button type="submit">Einloggen</button>
+
+            <!-- Fehlermeldung -->
+            <p id="login-error" class="error shake text-sm text-[var(--warning)] hidden">Benutzername oder Passwort ist
+                leer.</p>
+
+            <!-- Registrieren-Link -->
+            <p class="text-sm text-center">
+                Noch kein Konto? <a href="./wahlleiter/registrieren" class="register">Jetzt registrieren</a>
+            </p>
+        </form>
+
+        <h2 class="text-xl font-semibold"> Wahlsysteme </h2>
+        <p class="elections-text">
+            Alle Wahlsysteme finden Sie
+            <a href="./wahlsysteme" class="electiontypes">hier</a>.
+        </p>
+        <h2 class="text-xl font-semibold"> Downloads </h2>
+        <p class="dafny-text">
+            Unsere Wahlsysteme sind mit Dafny formal verifiziert. Um deren Korrektheit zu überprüfen, kann der aktuelle
+            Dafny-Code <a href="./assets/dafnyDownload.zip" download class="download-dafny">hier</a>
+            heruntergeladen werden.
+        </p>
+    </main>
+
+
+
+</body>
+
+</html>
+
+<script src="./dist/wahlleiterAnmeldung.js"></script>

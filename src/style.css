@@ -1,0 +1,67 @@
+/* Überschrft Styling */
+h1 {
+  text-align: center;
+  font-family: var(--font-sans-serif);
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  padding: 2.5rem;
+}
+
+button,
+a {
+  font-size: 1.1rem;
+}
+
+/* Registrierungs Link */
+a.register {
+  all: unset;
+  color: #457ee8;
+  font-weight: bold;
+}
+
+a.register:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Wenn falscher Input ist, dann gibt es eine Fehlermeldung mit dieser Animation */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-6px);
+  }
+  40%,
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+a.download-dafny,
+a.electiontypes {
+  all: unset;
+  color: #457ee8;
+  font-weight: bold;
+}
+
+a.download-dafny:hover,
+a.electiontypes:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.dafny-text,
+.elections-text {
+  text-align: center;
+  margin: 0.5rem auto;
+  width: 40%;
+  line-break: auto;
+}

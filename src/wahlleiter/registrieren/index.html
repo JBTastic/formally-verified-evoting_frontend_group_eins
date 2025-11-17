@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../output.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="icon" href="../../assets/favicon.png" type="image/png" />
+    <script src="../../jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back" />
+</head>
+
+<body>
+    <main class="flex flex-col items-center">
+        <!-- Überschrift -->
+        <h1>
+            Wahlleiter Registrierung
+        </h1>
+        <!-- Login-Formular -->
+        <form class="flex flex-col items-center gap-4 w-full max-w-sm">
+            <h2 class="text-2xl font-semibold">Registrieren</h2>
+            <input type="email" placeholder="E-Mail" required />
+            <input type="text" placeholder="Benutzername" required />
+            <input type="password" placeholder="Passwort" required />
+            <button type="submit" class="font-semibold px-4 py-1">
+                Registrieren
+            </button>
+
+            <!-- Registrieren-Link -->
+            <p class="text-sm text-center">
+                <a href="../../" class="back inline-flex items-center gap-1">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Zurück
+                </a>
+            </p>
+        </form>
+    </main>
+
+    <script type="module" src="../../dist/wahlleiterRegistrieren.js"></script>
+</body>
+
+</html>
